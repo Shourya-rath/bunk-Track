@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Campus Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Campus Data</h1>
+
+        <!-- File Upload Section -->
+        <div class="file-upload">
+            <label for="csv-file">Upload CSV:</label>
+            <input type="file" id="csv-file" accept=".csv">
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="filters">
+            <label for="search-roll">Search by Roll Number:</label>
+            <input type="text" id="search-roll" placeholder="Enter Roll Number...">
+            
+            <label for="search-date">Filter by Date:</label>
+            <input type="text" id="search-date" placeholder="Enter Date (DD/MM/YYYY)">
+            
+            <label for="search-time">Filter by Time:</label>
+            <input type="text" id="search-time" placeholder="Enter Time (HH:mm:ss)">
+        </div>
+
+        <!-- Table Section -->
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Coordinates</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>On Campus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

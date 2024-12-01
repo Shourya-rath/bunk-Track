@@ -1,0 +1,33 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
+    // Include Flutter Tools from the SDK
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    // Define repositories for plugin resolution
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    // Flutter Plugin Loader (required for Flutter builds)
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+
+    // Android Application Plugin (apply false so it's only used in the app-level build)
+    id "com.android.application" version "8.1.0" apply false
+
+    // Kotlin Android Plugin (for Kotlin support)
+    id "org.jetbrains.kotlin.android" version "1.8.22" apply false
+}
+
+// Include the app module
+include ":app"

@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Modern sans-serif font, similar to Notion */
+    background-color: #1e1e2f; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* File Upload Section */
+.file-upload {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.file-upload label {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.file-upload input[type="file"] {
+    background-color: #3f3f4b;
+    color: #e0e0e0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload input[type="file"]:hover {
+    background-color: #57575e;
+}
+
+/* Filters Section */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filters label {
+    color: #e0e0e0;
+}
+
+#search-roll {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #505050;
+    border-radius: 4px;
+    background-color: #3f3f4b;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+#search-roll:focus {
+    outline: none;
+    border-color: #4CAF50; /* Highlight search bar on focus */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #444;
+    word-wrap: break-word;
+}
+
+th {
+    background: linear-gradient(132deg,#242424 , #343434); /* Green gradient for headers */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a3b; /* Slightly darker rows for a modern feel */
+}
+
+tr:nth-child(odd) {
+    background-color: #333343; /* Darker background for odd rows */
+}
+
+tr:hover {
+    background-color: #444654; /* Highlight row on hover */
+}
+
+/* On Campus Status */
+.true {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.false {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    #search-roll {
+        width: 200px; /* Smaller search box on mobile */
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    #search-roll {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+/* On Campus Status */
+.true {
+    background-color: #3c9d428b; /* Darker green */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.false {
+    background-color: #e5383594; /* Darker red */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
